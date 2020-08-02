@@ -1,0 +1,56 @@
+
+import java.util.*;
+
+class TestClass {
+    
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner sc=new Scanner(System.in);
+		
+		int t,i,k;
+	    t=sc.nextInt();
+	    
+	    while(t--!=0){
+	    	int sum=0;
+	        String a=sc.next();
+	        for(i=0;i<a.length();i++){
+		        if(a.charAt(i)=='0')
+		            sum=sum+6;
+		        else if(a.charAt(i)=='1')
+		            sum=sum+2;
+		        else if(a.charAt(i)=='2')
+		            sum=sum+5;
+		        else if(a.charAt(i)=='3')
+		            sum=sum+5;
+		        else if(a.charAt(i)=='4')
+		            sum=sum+4;
+		        else if(a.charAt(i)=='5')
+		            sum=sum+5;
+	            else if(a.charAt(i)=='6')
+		            sum=sum+6;
+	            else if(a.charAt(i)=='7')
+		            sum=sum+3;
+		        else if(a.charAt(i)=='8')
+		            sum=sum+7;
+		        else if(a.charAt(i)=='9')
+		            sum=sum+6;
+	        }
+
+	        if(sum%2!=0){
+	            
+		        System.out.print(7);
+
+		        for(k=2;k<=sum/2;k++)
+		        	System.out.print(1);
+	        }
+
+	        else{
+		        for(k=1;k<=sum/2;k++)
+		        	System.out.print(1);
+		        }
+		        
+		    System.out.println();
+	    
+        }
+    }
+}
