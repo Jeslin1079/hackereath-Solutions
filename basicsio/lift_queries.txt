@@ -1,0 +1,39 @@
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+       
+        Scanner in = new Scanner(System.in);
+
+        int A = 0;
+        int B = 7;
+
+        int t = in.nextInt();
+
+        for(int c=0; c<t; c++){
+
+            int fl = in.nextInt();
+
+            int a = Math.abs(fl-A);
+            int b = Math.abs(B-fl);
+
+            if(a<b){
+                System.out.println("A");
+                A = fl;
+            }else if(b<a){
+                System.out.println("B");
+                B = fl;
+            }else if(a==b){
+                if(A<B){
+                    System.out.println("A");
+                    A = fl;
+                }else{
+                    System.out.println("B");
+                    B = fl;
+                }
+            }
+
+        }
+
+    }
+}
